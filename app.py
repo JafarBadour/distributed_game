@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify, make_response, request
 from celery_spawner import make_celery
 from flask_cors import CORS
 
@@ -38,8 +38,11 @@ def getstate(key='newstate'):
     return json.loads(r.get(key).decode().replace("\'", "\""))
 
 
-@flask_app.route('/update_state/<state>', methods=['GET'])
-def update_state(state):
+@flask_app.route('/update_state/', methods=['POST'])
+def update_state():
+    print(request.data)
+    state = json.loads(request.data.decode())
+    print(state)
     obj = updstate.delay(state)
 
     resp = make_response('Ok')

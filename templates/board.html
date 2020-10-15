@@ -50,8 +50,9 @@
         <td style="empty-cells: hide;"></td>
         <td style="empty-cells: hide;"></td>
         <td style="empty-cells: hide;"></td>
-        <td class="nikola"> 1 </td>
-        <td> 2 </td>
+        <td class="nikola" id="f1"> 1 </td>
+
+        <td class="nikola"> 2 </td>
         <td> 3 </td>
       </tr>
       <tr>
@@ -72,7 +73,7 @@
         <td style="empty-cells: hide;"></td>
         <td> 9 </td>
         <td style="background: red;"> 10 </td>
-        <td> 11 </td>
+        <td id="11"> 11 </td>
         <td style="empty-cells: hide;"></td>
         <td style="background: red;"> 12 </td>
         <td style="background: red;"> 13 </td>
@@ -213,35 +214,66 @@
 
     <script type="text/javascript">
       var mycol = "Get in";
+      var data = {};
       function myFunction() {
         var xhr = new XMLHttpRequest();
             /// this thing might need editting
             if(mycol != "Get in"){
               return;
             }
-           xhr.open("GET", "http://0.0.0.0:5000/login", true);
-           xhr.send( null ); 
-    
-           
+           xhr.open("GET", "http://0.0.0.0:5000/login/", true);
+           xhr.send( null );
+
+
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                
+            console.log(xhr.responseText);
             data = JSON.parse(xhr.responseText);
                        turn = -1;
-                       for(var k in data){
-                          if(turn < data[k]["turn"]){
-                            turn = data[k]["turn"];
-                            mycol = k;
-                          }
-                    }
+           for(var k in data){
+              if(turn < data[k]["turn"]){
+                turn = data[k]["turn"];
+                mycol = k;
+              }
+            }
             document.getElementById("demobutton").innerHTML = mycol;
             console.log('login success');
             console.log(mycol);
             console.log(data);
+
                      }
         };
 
       }
+
+      function get_state(){
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "http://0.0.0.0:5000/get_state/", true);
+                    xhr.send( null );
+                    xhr.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                        data=JSON.parse(xhr.responseText)
+                      }
+                    }
+        return data;
+      }
+
+      function update_state(var newstate){
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", "http://localhost:5000/update_state/", true);
+              xhr.send(JSON.stringify({
+                  "newstate": {"zinj" : "ks"}
+
+              }));
+              xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+
+                        console.log(xhr.response);
+                    }
+                };
+      }
+
     </script>
   </body>
 </html>
