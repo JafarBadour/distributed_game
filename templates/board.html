@@ -1,0 +1,247 @@
+<html>
+  <head>
+      <title> parcheesi </title>
+      <link rel="stylesheet" href="css/parcheesi.css">
+      <style type="text/css">
+        td{
+          border: 1px solid black;
+        }
+        td {
+          height: 50px;
+          width: 50px;
+        }
+        td:hover {
+          background-color: #f5f5f5;
+        }
+        table {
+          margin-left: 30%;
+          margin-top: 5%;
+        }
+
+        .nikola {
+          background: url("pieces/red.png");
+          background-size: auto 50px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .button {
+            position: absolute;
+            left: 250px;
+            top: 250px;
+            background-color: rgba(0, 0, 0, 0.8); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+
+        }
+      </style>
+  </head>
+  <body>
+    <button onclick="myFunction()" class="button" id="demobutton">Get in</button>
+
+    <table>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td class="nikola"> 1 </td>
+        <td> 2 </td>
+        <td> 3 </td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td> 4 </td>
+        <td style="background: red;"> 5 </td>
+        <td style="background: red; opacity:0.6;"> 6 </td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: green;"> 7 </td>
+        <td style="background: green;"> 8 </td>
+        <td style="empty-cells: hide;"></td>
+        <td> 9 </td>
+        <td style="background: red;"> 10 </td>
+        <td> 11 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: red;"> 12 </td>
+        <td style="background: red;"> 13 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: green;"> 14 </td>
+        <td style="background: green;"> 15 </td>
+        <td style="empty-cells: hide;"></td>
+        <td> 16 </td>
+        <td style="background: red;"> 17 </td>
+        <td> 18 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: red;"> 19 </td>
+        <td style="background: red;"> 20 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td> 21 </td>
+        <td style="background: red;"> 22 </td>
+        <td> 23 </td>
+      </tr>
+      <tr>
+        <td> 24 </td>
+        <td style="background: green; opacity:0.6;"> 25 </td>
+        <td> 26 </td>
+        <td> 27 </td>
+        <td> 28 </td>
+        <td> 29 </td>
+        <td> <img src = "arrows/red.png" height="50px"> </td>
+        <td> 30 </td>
+        <td> 31 </td>
+        <td> 32 </td>
+        <td> 33 </td>
+        <td> 34 </td>
+        <td> 35 </td>
+      </tr>
+      <tr>
+        <td> 36 </td>
+        <td style="background: green;"> 37 </td>
+        <td style="background: green;"> 38 </td>
+        <td style="background: green;"> 39 </td>
+        <td style="background: green;"> 40 </td>
+        <td> <img src = "arrows/green.png" height="50px"></td>
+        <td> <img src = "arrows/center.png" height="50px"> </td>
+        <td> <img src = "arrows/blue.png" height="50px"> </td>
+        <td style="background: blue;"> 41 </td>
+        <td style="background: blue;"> 42 </td>
+        <td style="background: blue;"> 43 </td>
+        <td style="background: blue;"> 44 </td>
+        <td> 45 </td>
+      </tr>
+      <tr>
+        <td> 46 </td>
+        <td> 47 </td>
+        <td> 48 </td>
+        <td> 49 </td>
+        <td> 50 </td>
+        <td> 51 </td>
+        <td> <img src = "arrows/yellow.png" height="50px"></td>
+        <td> 52 </td>
+        <td> 53 </td>
+        <td> 54 </td>
+        <td> 55 </td>
+        <td style="background: blue; opacity:0.6;"> 56 </td>
+        <td> 57 </td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td> 58 </td>
+        <td style="background: yellow;"> 59 </td>
+        <td> 60 </td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: yellow;"> 61 </td>
+        <td style="background: yellow;"> 62 </td>
+        <td style="empty-cells: hide;"></td>
+        <td> 63 </td>
+        <td style="background: yellow;"> 64 </td>
+        <td> 65 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: blue;"> 66 </td>
+        <td style="background: blue;"> 67 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: yellow;"> 68 </td>
+        <td style="background: yellow;"> 69 </td>
+        <td style="empty-cells: hide;"></td>
+        <td>70</td>
+        <td style="background: yellow;"> 71 </td>
+        <td> 72 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: blue;"> 73 </td>
+        <td style="background: blue;"> 74 </td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="background: yellow; opacity:0.6;"> 75 </td>
+        <td style="background: yellow;"> 76 </td>
+        <td> 77 </td>
+      </tr>
+      <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td> 78 </td>
+        <td> 79 </td>
+        <td> 80 </td>
+      </tr>
+    </table>
+
+    <script type="text/javascript">
+      var mycol = "Get in";
+      function myFunction() {
+        var xhr = new XMLHttpRequest();
+            /// this thing might need editting
+            if(mycol != "Get in"){
+              return;
+            }
+           xhr.open("GET", "http://0.0.0.0:5000/login", true);
+           xhr.send( null ); 
+    
+           
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+            data = JSON.parse(xhr.responseText);
+                       turn = -1;
+                       for(var k in data){
+                          if(turn < data[k]["turn"]){
+                            turn = data[k]["turn"];
+                            mycol = k;
+                          }
+                    }
+            document.getElementById("demobutton").innerHTML = mycol;
+            console.log('login success');
+            console.log(mycol);
+            console.log(data);
+                     }
+        };
+
+      }
+    </script>
+  </body>
+</html>
