@@ -1,29 +1,26 @@
 <html>
-  <head>
-      <title> parcheesi </title>
-      <link rel="stylesheet" href="css/parcheesi.css">
-      <style type="text/css">
-        td{
-          border: 1px solid black;
-        }
+<head>
+    <title> parcheesi </title>
+    <link rel="stylesheet" href="css/parcheesi.css">
+    <style type="text/css">
         td {
-          height: 50px;
-          width: 50px;
-        }
-        td:hover {
-          background-color: #f5f5f5;
-        }
-        table {
-          margin-left: 30%;
-          margin-top: 5%;
+            border: 1px solid black;
         }
 
-        .nikola {
-          background: url("pieces/red.png");
-          background-size: auto 50px;
-          background-position: center;
-          background-repeat: no-repeat;
+        td {
+            height: 50px;
+            width: 50px;
         }
+
+        td:hover {
+            background-color: #f5f5f5;
+        }
+
+        table {
+            margin-left: 35%;
+            margin-top: 10%;
+        }
+
         .button {
             position: absolute;
             left: 250px;
@@ -38,242 +35,448 @@
             font-size: 32px;
 
         }
-      </style>
-  </head>
-  <body>
-    <button onclick="myFunction()" class="button" id="demobutton">Get in</button>
 
-    <table>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td class="nikola" id="f1"> 1 </td>
+        .button2 {
+            position: absolute;
+            left: 250px;
+            top: 350px;
+            background-color: rgba(0, 0, 0, 0.8); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 22px;
 
-        <td class="nikola"> 2 </td>
-        <td> 3 </td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td> 4 </td>
-        <td style="background: red;"> 5 </td>
-        <td style="background: red; opacity:0.6;"> 6 </td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: green;"> 7 </td>
-        <td style="background: green;"> 8 </td>
-        <td style="empty-cells: hide;"></td>
-        <td> 9 </td>
-        <td style="background: red;"> 10 </td>
-        <td id="11"> 11 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: red;"> 12 </td>
-        <td style="background: red;"> 13 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: green;"> 14 </td>
-        <td style="background: green;"> 15 </td>
-        <td style="empty-cells: hide;"></td>
-        <td> 16 </td>
-        <td style="background: red;"> 17 </td>
-        <td> 18 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: red;"> 19 </td>
-        <td style="background: red;"> 20 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td> 21 </td>
-        <td style="background: red;"> 22 </td>
-        <td> 23 </td>
-      </tr>
-      <tr>
-        <td> 24 </td>
-        <td style="background: green; opacity:0.6;"> 25 </td>
-        <td> 26 </td>
-        <td> 27 </td>
-        <td> 28 </td>
-        <td> 29 </td>
-        <td> <img src = "arrows/red.png" height="50px"> </td>
-        <td> 30 </td>
-        <td> 31 </td>
-        <td> 32 </td>
-        <td> 33 </td>
-        <td> 34 </td>
-        <td> 35 </td>
-      </tr>
-      <tr>
-        <td> 36 </td>
-        <td style="background: green;"> 37 </td>
-        <td style="background: green;"> 38 </td>
-        <td style="background: green;"> 39 </td>
-        <td style="background: green;"> 40 </td>
-        <td> <img src = "arrows/green.png" height="50px"></td>
-        <td> <img src = "arrows/center.png" height="50px"> </td>
-        <td> <img src = "arrows/blue.png" height="50px"> </td>
-        <td style="background: blue;"> 41 </td>
-        <td style="background: blue;"> 42 </td>
-        <td style="background: blue;"> 43 </td>
-        <td style="background: blue;"> 44 </td>
-        <td> 45 </td>
-      </tr>
-      <tr>
-        <td> 46 </td>
-        <td> 47 </td>
-        <td> 48 </td>
-        <td> 49 </td>
-        <td> 50 </td>
-        <td> 51 </td>
-        <td> <img src = "arrows/yellow.png" height="50px"></td>
-        <td> 52 </td>
-        <td> 53 </td>
-        <td> 54 </td>
-        <td> 55 </td>
-        <td style="background: blue; opacity:0.6;"> 56 </td>
-        <td> 57 </td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td> 58 </td>
-        <td style="background: yellow;"> 59 </td>
-        <td> 60 </td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: yellow;"> 61 </td>
-        <td style="background: yellow;"> 62 </td>
-        <td style="empty-cells: hide;"></td>
-        <td> 63 </td>
-        <td style="background: yellow;"> 64 </td>
-        <td> 65 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: blue;"> 66 </td>
-        <td style="background: blue;"> 67 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: yellow;"> 68 </td>
-        <td style="background: yellow;"> 69 </td>
-        <td style="empty-cells: hide;"></td>
-        <td>70</td>
-        <td style="background: yellow;"> 71 </td>
-        <td> 72 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: blue;"> 73 </td>
-        <td style="background: blue;"> 74 </td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="background: yellow; opacity:0.6;"> 75 </td>
-        <td style="background: yellow;"> 76 </td>
-        <td> 77 </td>
-      </tr>
-      <tr>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td style="empty-cells: hide;"></td>
-        <td> 78 </td>
-        <td> 79 </td>
-        <td> 80 </td>
-      </tr>
-    </table>
+        }
 
-    <script type="text/javascript">
-      var mycol = "Get in";
-      var data = {};
-      function myFunction() {
-        var xhr = new XMLHttpRequest();
-            /// this thing might need editting
-            if(mycol != "Get in"){
-              return;
+        .button3 {
+            position: absolute;
+            left: 250px;
+            top: 450px;
+            background-color: rgba(0, 0, 0, 0.8); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+
+        }
+
+        .button4 {
+            position: absolute;
+            left: 250px;
+            top: 550px;
+            background-color: rgba(0, 0, 0, 0.8); /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+
+        }
+
+        .fancyinfo{
+            position: absolute;
+            left: 250px;
+            top: 650px;
+            background-color: rgba(0, 0, 44, 0.8); /* Green */
+            border: none;
+            color: white;
+            padding: 64px 64px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .f33, .f34, .f41, .f42 {
+            background: red;
+        }
+
+        .f37, .f38, .f43, .f44 {
+            background: blue;
+        }
+
+        .f39, .f40, .f45, .f46 {
+            background: yellow;
+        }
+
+        .f35, .f36, .f47, .f48 {
+            background: green;
+        }
+
+        .f1 {
+            background: red;
+            opacity: 0.6;
+        }
+
+        .f9 {
+            background: blue;
+            opacity: 0.6;
+        }
+
+        .f17 {
+            background: yellow;
+            opacity: 0.6;
+        }
+
+        .f25 {
+            background: green;
+            opacity: 0.6;
+        }
+
+        .red-piece {
+            background: url("pieces/red.png");
+            background-size: auto 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .green-piece {
+            background: url("pieces/green.png");
+            background-size: auto 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .blue-piece {
+            background: url("pieces/blue.png");
+            background-size: auto 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .yellow-piece {
+            background: url("pieces/yellow.png");
+            background-size: auto 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+    </style>
+</head>
+<body>
+<button onclick="myFunction()" class="button" id="demobutton">Get in</button>
+<button onclick="roll_dice()" class="button2" id="rolldice">Roll dice</button>
+<button onclick="select_piece1()" class="button3" id="select_piece1">select piece1</button>
+
+<button onclick="select_piece2()" class="button4" id="select_piece2">select piece2</button>
+
+
+<table>
+    <tr>
+        <td style="empty-cells: hide;"></td>
+        <td id="f47" class="f47"> 47</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f30" class="f30"> 30</td>
+        <td id="f31" class="f31"> 31</td>
+        <td id="f32" class="f32"> 32</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f41" class="f41"> 41</td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+    </tr>
+    <tr>
+        <td style="empty-cells: hide;"></td>
+        <td id="f48" class="f48"> 48</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f29" class="f29"> 29</td>
+        <td id="f33" class="f33">  </td>
+        <td id="f1" class="f1"> 1</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f42" class="f42"> 42</td>
+        <td style="empty-cells: hide;"></td>
+    </tr>
+    <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f28" class="f28"> 28</td>
+
+        <td id="f34" class="f34"> </td>
+        <td id="f2" class="f2"> 2</td>
+    </tr>
+    <tr>
+        <td id="f24" class="f24"> 24</td>
+        <td id="f25" class="f25"> 25</td>
+
+        <td id="f26" class="f26"> 26</td>
+        <td id="f27" class="f27"> 27</td>
+        <td> </td>
+        <td id="f3" class="f3"> 3</td>
+        <td id="f4" class="f4"> 4</td>
+        <td id="f5" class="f5"> 5</td>
+        <td id="f6" class="f6"> 6</td>
+    </tr>
+    <tr>
+        <td id="f23" class="f23"> 23</td>
+        <td id="f35" class="f35">  </td>
+        <td id="f36" class="f36">  </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td id="f38" class="f38">  </td>
+        <td id="f37" class="f37">  </td>
+        <td id="f7" class="f7"> 7</td>
+    </tr>
+    <tr>
+        <td id="f22" class="f22"> 22</td>
+        <td id="f21" class="f21"> 21</td>
+        <td id="f20" class="f20"> 20</td>
+        <td id="f19" class="f19"> 19</td>
+        <td>  </td>
+        <td id="f11" class="f11"> 11</td>
+        <td id="f10" class="f10"> 10</td>
+        <td id="f9" class="f9"> 9</td>
+        <td id="f8" class="f8"> 8</td>
+    </tr>
+    <tr>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f18" class="f18"> 18</td>
+        <td id="f40" class="f40">  </td>
+        <td id="f12" class="f12"> 12</td>
+    </tr>
+    <tr>
+        <td style="empty-cells: hide;"></td>
+        <td id="f45" class="f45"> 45</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f17" class="f17"> 17</td>
+        <td id="f39" class="f39">  </td>
+        <td id="f13" class="f13"> 13</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f43" class="f43"> 43</td>
+        <td style="empty-cells: hide;"></td>
+    </tr>
+    <tr>
+        <td style="empty-cells: hide;"></td>
+        <td id="f46" class="f46"> 46</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f16" class="f16"> 16</td>
+        <td id="f15" class="f15"> 15</td>
+        <td id="f14" class="f14"> 14</td>
+        <td style="empty-cells: hide;"></td>
+        <td id="f44" class="f44"> 44</td>
+        <td style="empty-cells: hide;"></td>
+    </tr>
+</table>
+<ul class="fancyinfo">
+  <li id="ping"></li>
+  <li id="turn"></li>
+  <li id="a1"></li>
+  <li id="a2"></li>
+  <li id="a3"></li>
+  <li id="a4"></li>
+</ul>
+<script type="text/javascript">
+    var mycol = "Get in";
+    var data = {};
+    var dicenumber = 0;
+    var piece1_dict = {
+        'red': 41,
+        'green': 47,
+        'yellow': 45,
+        'blue': 43
+    }
+
+    var piece2_dict = {
+        'red': 42,
+        'green': 48,
+        'yellow': 46,
+        'blue': 44
+    }
+
+    function update_layout() {
+        var started = new Date().getTime();
+        clear_board();
+        fill_board();
+        var ended = new Date().getTime();
+        var millisecs = ended - started;
+        var timer_data = get_state(key="get_timers")
+        document.getElementById("ping").innerText = "Ping = " + millisecs + " ms";
+        document.getElementById("turn").innerText = "turn = " + timer_data["turn"] ;
+
+        document.getElementById("a1").innerText = "Celery last seen red = " + timer_data['red'] + " s";
+        document.getElementById("a2").innerText = "Celery last seen green = " + timer_data['green'] + " s";
+        document.getElementById("a3").innerText = "Celery last seen blue = " + timer_data['blue'] + " s";
+        document.getElementById("a4").innerText = "Celery last seen yellow = " + timer_data['yellow'] + " s";
+
+    }
+
+    function clear_board() {
+        for (var i = 1; i < 33; i++) {
+            document.getElementById("f" + i).classList.remove('red-piece');
+            document.getElementById("f" + i).classList.remove('blue-piece');
+            document.getElementById("f" + i).classList.remove('green-piece');
+            document.getElementById("f" + i).classList.remove('yellow-piece');
+        }
+        for (var i = 41; i < 49; i++) {
+            document.getElementById("f" + i).classList.remove('red-piece');
+            document.getElementById("f" + i).classList.remove('blue-piece');
+            document.getElementById("f" + i).classList.remove('green-piece');
+            document.getElementById("f" + i).classList.remove('yellow-piece');
+        }
+    }
+
+    function fill_board() {
+        get_state();
+
+        document.getElementById("f" + data['red']['piece1']).classList.add('red-piece');
+        document.getElementById("f" + data['red']['piece2']).classList.add('red-piece');
+        document.getElementById("f" + data['green']['piece1']).classList.add('green-piece');
+        document.getElementById("f" + data['green']['piece2']).classList.add('green-piece');
+        document.getElementById("f" + data['blue']['piece1']).classList.add('blue-piece');
+        document.getElementById("f" + data['blue']['piece2']).classList.add('blue-piece');
+        document.getElementById("f" + data['yellow']['piece1']).classList.add('yellow-piece');
+        document.getElementById("f" + data['yellow']['piece2']).classList.add('yellow-piece');
+        dicenumber = 0;
+    }
+
+    function update_pos(pos) {
+        if (pos > 40) {
+            zbr = {
+                41: 1,
+                42: 1,
+                47: 25,
+                48: 25,
+                45: 17,
+                46: 17,
+                43: 9,
+                44: 9
             }
-           xhr.open("GET", "http://0.0.0.0:5000/login/", true);
-           xhr.send( null );
+            pos = zbr[pos];
+        } else {
+            pos = (pos - 1 + dicenumber) % 32 + 1;
+        }
+        var cols = ['red', 'green', 'blue', 'yellow'];
+        get_state();
+        console.log(data);
+        console.log("pos update");
+        for (var i = 0; i < 4; i++) {
+            var col = cols[i];
+            console.log(col);
+            if(col == mycol)continue;
+            if (data[col]['piece1'] == pos) {
+                data[col]['piece1'] = piece1_dict[col];
+            }
+            if (data[col]['piece2'] == pos) {
+                data[col]['piece2'] = piece2_dict[col];
+            }
+        }
+
+        return pos
+    }
+
+    function select_piece1() {
+        get_state();
+        var pos = data[mycol]['piece1'];
+        var oldpos = pos;
+        pos = update_pos(pos);
+        console.log("new position is " + pos + " old pos " + oldpos)
+        console.log(data[mycol])
 
 
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            console.log(xhr.responseText);
-            data = JSON.parse(xhr.responseText);
-                       turn = -1;
-           for(var k in data){
-              if(turn < data[k]["turn"]){
+        data[mycol]['piece1'] = pos;
+        console.log(data)
+
+        update_state(data);
+        clear_board();
+        fill_board();
+        document.getElementById("rolldice").innerText = "Roll dice";
+
+    }
+
+    function select_piece2() {
+        get_state();
+        var pos = data[mycol]['piece2'];
+        pos = update_pos(pos);
+
+        data[mycol]['piece2'] = pos;
+        update_state(data);
+
+        clear_board();
+        fill_board();
+        document.getElementById("rolldice").innerText = "Roll dice";
+
+    }
+
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function roll_dice() {
+        if (dicenumber != 0) {
+            return;
+        }
+        dicenumber = getRandomInt(6) + 1;
+        document.getElementById("rolldice").innerText = "Dice=" + dicenumber;
+    }
+
+    function myFunction() {
+        var xhr = new XMLHttpRequest();
+        /// this thing might need editting
+        if (mycol != "Get in") {
+            return;
+        }
+        xhr.open("GET", "http://0.0.0.0:5000/login/", false);
+        xhr.send(null);
+
+
+        console.log(xhr.responseText);
+        data = JSON.parse(xhr.responseText);
+        turn = -1;
+        for (var k in data) {
+            if (turn < data[k]["turn"]) {
                 turn = data[k]["turn"];
                 mycol = k;
-              }
             }
-            document.getElementById("demobutton").innerHTML = mycol;
-            console.log('login success');
-            console.log(mycol);
-            console.log(data);
+        }
+        document.getElementById("demobutton").innerHTML = mycol;
+        console.log('login success');
+        console.log(mycol);
+        console.log(data);
 
-                     }
-        };
 
-      }
+        setInterval(update_layout, 2500);
+    }
 
-      function get_state(){
+    function get_state(key='get_state') {
         var xhr = new XMLHttpRequest();
 
-        xhr.open("GET", "http://0.0.0.0:5000/get_state/", true);
-                    xhr.send( null );
-                    xhr.onreadystatechange = function() {
-                      if (this.readyState == 4 && this.status == 200) {
-                        data=JSON.parse(xhr.responseText)
-                      }
-                    }
+        xhr.open("GET", "http://0.0.0.0:5000/"+key+"/"+mycol, false);
+        xhr.send(null);
+        if(key == "get_state") {
+            data = JSON.parse(xhr.responseText);
+        }else{
+            return JSON.parse(xhr.responseText);
+        }
         return data;
-      }
+    }
 
-      function update_state(var newstate){
-              var xhr = new XMLHttpRequest();
-              xhr.open("POST", "http://localhost:5000/update_state/", true);
-              xhr.send(JSON.stringify({
-                  "newstate": {"zinj" : "ks"}
+    function update_state(tdata) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:5000/update_state/", false);
+        tdata['color'] = mycol;
+        xhr.send(JSON.stringify(tdata));
+        console.log(xhr.response);
 
-              }));
-              xhr.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
+    }
 
-                        console.log(xhr.response);
-                    }
-                };
-      }
+    // document.getElementById("f39").classList.add('green-piece');
+    // document.getElementById("f31").classList.add('red-piece');
+    // document.getElementById("f21").classList.remove('red-piece');
+    // document.getElementById("f29").classList.remove('red-piece');
+    // document.getElementById("f35").classList.remove('red-piece');
 
-    </script>
-  </body>
+
+</script>
+</body>
 </html>
